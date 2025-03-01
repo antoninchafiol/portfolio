@@ -1,0 +1,9 @@
+<div class="collection">
+    {% for post in posts %}
+      <a href="{{ post.url }}" class="collection-item">
+        <span class="title"><strong>{{ post.title }}</strong></span>
+        <p>{{ post.excerpt }}</p>
+      </a>
+    {% endfor %}
+  </div>
+  

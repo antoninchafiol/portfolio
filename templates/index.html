@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Home - Freelancer Portfolio{% endblock %}
+{% block content %}
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative z-10">
+  <h1 class="text-4xl md:text-6xl font-bold mb-4">
+    Empowering Healthcare with AI-Driven Workflows
+  </h1>
+  <p class="max-w-xl mb-8 text-lg md:text-xl">
+    Helping and giving staff tools to operate is the best bet  
+    I streamline complex healthcare operations—giving staff more room to breathe and focus on what matters most.
+  </p>
+  <a href="#portfolio" class="bg-secondary text-mountain py-3 px-6 rounded-full text-lg font-semibold hover:opacity-90 transition duration-300">
+    See My Work
+  </a>
+</section>
+
+<!-- Technologies Section -->
+<section class="bg-white py-12">
+  <div class="container mx-auto text-center">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Technologies I Work With</h2>
+    <div class="flex justify-center space-x-6">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="h-12">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="h-12">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="h-12">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="h-12">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="AI/ML" class="h-12">
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-16 px-4 bg-mountain text-primary relative z-10">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+    <form class="space-y-4">
+      <div>
+        <input type="text" placeholder="Your Name" class="w-full p-3 border border-soft rounded-lg focus:outline-none">
+      </div>
+      <div>
+        <input type="email" placeholder="Your Email" class="w-full p-3 border border-soft rounded-lg focus:outline-none">
+      </div>
+      <div>
+        <textarea placeholder="Your Message" class="w-full p-3 border border-soft rounded-lg focus:outline-none" rows="4"></textarea>
+      </div>
+      <button type="submit" class="bg-adventure text-mountain py-3 px-6 rounded-full font-semibold hover:opacity-90 transition duration-300">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Unique Animated Background Element: AI Circuit Animation -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none">
+  <canvas id="ai-circuit" class="w-full h-full"></canvas>
+</div>
+{% endblock %}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth md:scroll-auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Antonin Chafiol{% endblock %}</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" hrek="https://fonts.googleapis.com/css?family=Roboto">
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  
+  <!-- HTMX -->
+  <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    module.exports = {
+    content: ["./templates/**/*.html"],
+    theme: {
+      extend: {
+        colors: {
+          primary: "#004C97",  // Dark Blue (Main)
+          secondary: "#8B5E3B", // Brown (Accents)
+          highlight: "#A7C7E7", // Light Blue (Hover, Soft Highlights)
+        },
+      },
+    },
+    plugins: [],
+};
+  </script>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+  {% block head %}{% endblock %}
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- <nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="/" class="text-primary-blue font-bold text-2xl">Freelancer</a>
+          <div class="hidden md:flex space-x-4 ml-10">
+            <a href="/about" class="text-gray-700 hover:text-primary-blue px-3 py-2 rounded-md">About</a>
+            <a href="/services" class="text-gray-700 hover:text-primary-blue px-3 py-2 rounded-md">Services</a>
+            <a href="/portfolio" class="text-gray-700 hover:text-primary-blue px-3 py-2 rounded-md">Portfolio</a>
+            <a href="/contact" class="text-gray-700 hover:text-primary-blue px-3 py-2 rounded-md">Contact</a>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <button class="bg-highlight-yellow hover:bg-creative-purple text-white px-4 py-2 rounded-md font-semibold">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav> -->
+  <!-- Navigation Bar -->
+  <nav id="navbar" class="w-full z-50 transition-all duration-500 shadow bg-transparent border-b border-gray-600/50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        <!-- Logo -->
+        <a href="/" class="text-2xl font-bold text-yellow-300 transition duration-300 hover:text-yellow-400 flex items-center">
+          <img src="../afi_logo_nobg.PNG" alt="AFI" class="h-8 mr-2">Antonin Chafiol
+        </a>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-8 text-dark-300 transition duration-300">
+            <li><a href="/about" class="pb-1 border-b-2 border-highlight hover:border-yellow-400 transition duration-300">01. About</a></li>
+            <li><a href="/services" class="pb-1 border-b-2 border-transparent hover:border-yellow-400 transition duration-300">02. Services</a></li>
+            <li><a href="/portfolio" class="pb-1 border-b-2 border-transparent hover:border-yellow-400 transition duration-300">03. Portfolio</a></li>
+            <li><a href="/blog" class="pb-1 border-b-2 border-transparent hover:border-yellow-400 transition duration-300">04. Blog</a></li>
+            <li><a href="/contact" class="pb-1 border-b-2 border-transparent hover:border-yellow-400 transition duration-300">05. Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-yellow-300 focus:outline-none transition duration-300 hover:text-yellow-400">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-900 text-gray-200 absolute w-full top-full left-0 text-center py-4 space-y-2">
+        <a href="/about" class="block py-2 transition duration-300 hover:text-yellow-400">01. About</a>
+        <a href="/services" class="block py-2 transition duration-300 hover:text-yellow-400">02. Services</a>
+        <a href="/portfolio" class="block py-2 transition duration-300 hover:text-yellow-400">03. Portfolio</a>
+        <a href="/blog" class="block py-2 transition duration-300 hover:text-yellow-400">04. Blog</a>
+        <a href="/contact" class="block py-2 transition duration-300 hover:text-yellow-400">05. Contact</a>
+    </div>
+</nav>
+
+
+
+  <!-- Main Content -->
+  <div class="w-full container items-center mx-auto" id="main-content">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    {% block content %}{% endblock %}
+  </div>
+
+  
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    const navbar = document.getElementById("navbar");
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > 50) {
+            navbar.classList.add("bg-blue-900/90", "backdrop-blur-md");
+        } else {
+            navbar.classList.remove("bg-blue-900/90", "backdrop-blur-md");
+        }
+
+        if (currentScrollY > lastScrollY) {
+            navbar.classList.add("opacity-0", "pointer-events-none");
+        } else {
+            navbar.classList.remove("opacity-0", "pointer-events-none");
+        }
+
+        lastScrollY = currentScrollY;
+    });
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
