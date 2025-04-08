@@ -1,0 +1,5 @@
+{% for project in healthcare_projects %}
+  {% include "partials/_feature_cards.html" %}
+{% endfor %}
+<!-- Remove the healthcare "Show More" button -->
+<div id="healthcare-more-button" hx-swap-oob="delete"></div>

@@ -1,0 +1,20 @@
+<div class="bg-white border border-gray-200 p-4">
+  <h3 class="text-xl font-bold text-gray-900 mb-4">{{ project.name }}</h3>
+  <img src="{{ project.image }}" alt="{{ project.name }}" class="w-full h-40 object-cover rounded-md">
+  <div class="mt-4 flex flex-col md:flex-row gap-4">
+    <div class="flex-1">
+      <h4 class="text-lg font-semibold text-gray-900">Issue</h4>
+      <p class="text-gray-600 text-sm">{{ project.issue }}</p>
+      <p class="text-gray-600 text-sm mt-2">
+        <span class="font-bold">Tech Used:</span> {{ project.tech }}
+      </p>
+    </div>
+    <div class="flex-1 border-l border-gray-300 pl-4">
+      <h4 class="text-lg font-semibold text-gray-900">Resolution</h4>
+      <p class="text-gray-600 text-sm">{{ project.resolution }}</p>
+    </div>
+  </div>
+  <a href="{{ project.github_url }}" class="block mt-4 text-blue-600 font-semibold hover:underline">
+    View Project →
+  </a>
+</div>

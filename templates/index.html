@@ -1,56 +1,58 @@
 {% extends "base.html" %}
-{% block title %}Home - Freelancer Portfolio{% endblock %}
+
+{% block title %}[Your Name] - Transforming Healthcare with Vision & Innovation{% endblock %}
+
+{% block head_extra %}
+
+{% endblock %}
+
 {% block content %}
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative z-10">
-  <h1 class="text-4xl md:text-6xl font-bold mb-4">
-    Empowering Healthcare with AI-Driven Workflows
-  </h1>
-  <p class="max-w-xl mb-8 text-lg md:text-xl">
-    Helping and giving staff tools to operate is the best bet  
-    I streamline complex healthcare operations—giving staff more room to breathe and focus on what matters most.
-  </p>
-  <a href="#portfolio" class="bg-secondary text-mountain py-3 px-6 rounded-full text-lg font-semibold hover:opacity-90 transition duration-300">
-    See My Work
-  </a>
-</section>
-
-<!-- Technologies Section -->
-<section class="bg-white py-12">
-  <div class="container mx-auto text-center">
-    <h2 class="text-2xl font-bold text-gray-800 mb-6">Technologies I Work With</h2>
-    <div class="flex justify-center space-x-6">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="h-12">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="h-12">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="h-12">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="h-12">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="AI/ML" class="h-12">
+  <!-- Hero Section with Animated Gradient Background (Half Screen) -->
+  <section class="relative overflow-hidden h-[50vh] flex items-center">
+    <!-- Animated Gradient Background Layer -->
+    <!-- Hero Content Layer -->
+    <div class="relative max-w-7xl mx-auto px-4 text-center">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight">
+        [Your Name]: Redefining Healthcare with Vision & Innovation
+      </h1>
+      <p class="mt-6 text-xl text-white">
+        Merging technical expertise with personal passion to empower healthcare organizations through AI-driven automation.
+      </p>
+      <div class="mt-8 flex justify-center gap-6">
+        <a href="/portfolio" class="inline-block px-8 py-4 bg-[#004C97] text-white text-lg font-semibold rounded-md shadow hover:bg-[#003a73] transition-colors duration-300">
+          See My Work
+        </a>
+        <a href="/contact" class="inline-block px-8 py-4 border border-[#004C97] text-[#004C97] bg-white text-lg font-semibold rounded-md hover:bg-[#A7C7E7]/20 transition-colors duration-300">
+          Let's Connect
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Contact Section -->
-<section class="py-16 px-4 bg-mountain text-primary relative z-10">
-  <div class="max-w-2xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-    <form class="space-y-4">
-      <div>
-        <input type="text" placeholder="Your Name" class="w-full p-3 border border-soft rounded-lg focus:outline-none">
+  <!-- Personal Brand & Vision Section (Half Screen) -->
+  <section class="bg-[#F3D5C0] h-[50vh] flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-8">
+      <!-- Larger Headshot -->
+      <img class="w-48 h-48 rounded-full object-cover shadow-lg" src="{{ url_for('static', filename='images/ghibli_1.PNG') }}" alt="[Your Name] Headshot">
+      <div class="text-center md:text-left">
+        <h2 class="text-3xl font-bold text-[#004C97]">
+          [Your Name], AI & Automation Consultant for Healthcare
+        </h2>
+        <p class="mt-2 text-lg text-[#4B5563]">
+          I blend technology with empathy, developing intelligent, automated solutions that streamline workflows and enhance patient care.
+        </p>
+        <button 
+          hx-get="/vision" 
+          hx-target="#visionContent" 
+          hx-swap="innerHTML" 
+          class="mt-4 inline-block px-6 py-3 bg-[#004C97] text-white font-semibold rounded-md shadow hover:bg-[#003a73] transition-colors duration-300">
+          Discover My Vision
+        </button>
+        <div id="visionContent" class="mt-4 text-[#374151] text-base">
+          <!-- Dynamic content loaded via HTMX will appear here -->
+        </div>
       </div>
-      <div>
-        <input type="email" placeholder="Your Email" class="w-full p-3 border border-soft rounded-lg focus:outline-none">
-      </div>
-      <div>
-        <textarea placeholder="Your Message" class="w-full p-3 border border-soft rounded-lg focus:outline-none" rows="4"></textarea>
-      </div>
-      <button type="submit" class="bg-adventure text-mountain py-3 px-6 rounded-full font-semibold hover:opacity-90 transition duration-300">
-        Send Message
-      </button>
-    </form>
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- Unique Animated Background Element: AI Circuit Animation -->
-<div class="fixed top-0 left-0 w-full h-full pointer-events-none">
-  <canvas id="ai-circuit" class="w-full h-full"></canvas>
-</div>
 {% endblock %}

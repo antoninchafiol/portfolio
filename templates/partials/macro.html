@@ -1,0 +1,17 @@
+{% set badge_classes = {
+    'Data Analysis': 'bg-green-200 text-green-900',
+    'Machine Learning': 'bg-yellow-200 text-yellow-900',
+    'Video Games': 'bg-red-200 text-red-900'
+} %}
+
+{% macro render_badge(category) %}
+    {% if "AI" in category %}
+        <span class="text-xs px-3 py-1 rounded-full bg-indigo-200 text-indigo-900">
+            {{ category }}
+        </span>
+    {% else %}
+        <span class="text-xs px-3 py-1 rounded-full {{ badge_classes.get(category, 'bg-gray-200 text-gray-900') }}">
+            {{ category }}
+        </span>
+    {% endif %}
+{% endmacro %}

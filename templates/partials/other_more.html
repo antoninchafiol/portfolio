@@ -1,0 +1,5 @@
+{% from "partials/macro.html" import render_badge with context %}
+{% for project in other_projects %}
+    {% include "partials/_other_cards.html" %}
+{% endfor %}
+<div id="other-more-button" hx-swap-oob="delete"></div>
