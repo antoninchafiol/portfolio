@@ -1,55 +1,49 @@
 {% extends "base.html" %}
 
-{% block title %}[Your Name] - Transforming Healthcare with Vision & Innovation{% endblock %}
+{% block title %}Antonin Chafiol{% endblock %}
 
 {% block head_extra %}
 
 {% endblock %}
 
 {% block content %}
-  <!-- Hero Section with Animated Gradient Background (Half Screen) -->
-  <section class="relative overflow-hidden h-[50vh] flex items-center">
-    <!-- Animated Gradient Background Layer -->
-    <!-- Hero Content Layer -->
+  <section class="relative overflow-hidden h-[50vh] flex items-center bg-[#4E1F00] ">
     <div class="relative max-w-7xl mx-auto px-4 text-center">
-      <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight">
-        [Your Name]: Redefining Healthcare with Vision & Innovation
+      <h1 class="text-5xl md:text-6xl font-extrabold text-[#FFF8E7] leading-tight">
+        Redefining Healthcare with Vision & Innovation
       </h1>
-      <p class="mt-6 text-xl text-white">
+      <p class="mt-6 text-xl text-[#FFF8E7]">
         Merging technical expertise with personal passion to empower healthcare organizations through AI-driven automation.
       </p>
       <div class="mt-8 flex justify-center gap-6">
-        <a href="/portfolio" class="inline-block px-8 py-4 bg-[#004C97] text-white text-lg font-semibold rounded-md shadow hover:bg-[#003a73] transition-colors duration-300">
+        <a href="/portfolio" class="inline-block px-8 py-4 bg-[#4E1F00] hover:bg-[#A34900] text-[#FFF8E7] border-2 border-[#FFF8E7] text-lg font-semibold rounded-md shadow transition-colors duration-300">
           See My Work
         </a>
-        <a href="/contact" class="inline-block px-8 py-4 border border-[#004C97] text-[#004C97] bg-white text-lg font-semibold rounded-md hover:bg-[#A7C7E7]/20 transition-colors duration-300">
+        <a href="/contact" 
+          class="inline-block px-8 py-4 border border-transparent bg-[#FAEAC6] text-[#2D2D2D] text-lg font-semibold rounded-md 
+                  hover:bg-[#F7D48B] hover:text-[#4E1F00] transition-colors duration-300">
           Let's Connect
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Personal Brand & Vision Section (Half Screen) -->
-  <section class="bg-[#F3D5C0] h-[50vh] flex items-center">
+  <section class="bg-[#fff8e7]  h-[50vh] flex items-center">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-8">
-      <!-- Larger Headshot -->
-      <img class="w-48 h-48 rounded-full object-cover shadow-lg" src="{{ url_for('static', filename='images/ghibli_1.PNG') }}" alt="[Your Name] Headshot">
+      <img class="w-48 h-48 rounded-full object-cover shadow-lg" src="{{ url_for('static', filename='images/perso_1.jpg') }}" alt="[Your Name] Headshot">
       <div class="text-center md:text-left">
-        <h2 class="text-3xl font-bold text-[#004C97]">
-          [Your Name], AI & Automation Consultant for Healthcare
+        <h2 class="text-3xl font-bold text-[#662900]">
+          Antonin Chafiol, AI & Automation Consultant for Healthcare
         </h2>
-        <p class="mt-2 text-lg text-[#4B5563]">
-          I blend technology with empathy, developing intelligent, automated solutions that streamline workflows and enhance patient care.
+        <p class="mt-2 text-lg text-[#2d2d2d]">
+          I believe that by empowering healthcare staff with tailored, efficient tools and intelligent automation, we can directly enhance patient care. Better support for those who care leads to better outcomes for those being cared for.
         </p>
-        <button 
-          hx-get="/vision" 
-          hx-target="#visionContent" 
-          hx-swap="innerHTML" 
-          class="mt-4 inline-block px-6 py-3 bg-[#004C97] text-white font-semibold rounded-md shadow hover:bg-[#003a73] transition-colors duration-300">
-          Discover My Vision
-        </button>
-        <div id="visionContent" class="mt-4 text-[#374151] text-base">
-          <!-- Dynamic content loaded via HTMX will appear here -->
+        
+        <a href="/about" 
+         class="inline-block mt-4 px-8 py-4 border border-transparent bg-[#662900] text-[#FFF8E7] text-lg font-semibold rounded-md 
+                hover:opacity-90 transition-opacity duration-300">
+        Learn About Me
+      </a>
         </div>
       </div>
     </div>

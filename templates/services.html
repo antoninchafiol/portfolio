@@ -3,148 +3,125 @@
 
 {% block content %}
 <section class="py-12 max-w-5xl mx-auto px-4">
-  <section class="text-center py-16 bg-[#FFF2EC] text-[#4B3621]">
+  <section class="text-center py-16 bg-[#FFF8E7] text-[#662900]">
     <h1 class="text-4xl font-bold">AI & Automation Solutions for Healthcare</h1>
     <p class="text-lg mt-2">Optimizing workflows, improving diagnostics, and streamlining operations for hospitals, clinics, and research labs.</p>
-    <a href="/contact" class="mt-4 inline-block px-6 py-3 bg-[#F7D48B] text-[#4B3621] rounded hover:bg-[#A7C7E7]">
+    <a href="/contact" class="mt-4 inline-block px-6 py-3 bg-[#CB682A] text-white rounded hover:bg-[#662900]">
       Let's Talk
     </a>
   </section>
-  
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <!-- Service Card 1: Intelligent Workflow Automation -->
-    <div class="flex items-center rounded-lg p-4 bg-white shadow-lg border border-[#F7D48B]">
-      <img src="https://cdn-icons-png.flaticon.com/512/2913/2913465.png" alt="Workflow Automation" class="w-16 h-16 rounded-lg object-cover">
+
+  <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div class="flex items-center rounded-lg p-4 bg-white shadow-lg border border-[#FAEBC6]">
+      <img src="{{ url_for('static', filename='images/folders.png') }}" alt="Automated Document Management" class="w-16 h-16 rounded-lg object-cover">
       <div class="ml-4">
-        <h3 class="text-xl font-semibold text-[#4B3621]">Intelligent Workflow Automation</h3>
-        <p class="text-[#4B3621] mt-1">
-          Eliminate bottlenecks & reduce manual work with AI-driven automation for scheduling, patient management, and staff coordination. 
-          <strong>Boost efficiency by up to 40%</strong> while improving patient care.
+        <h3 class="text-xl font-semibold text-[#662900]">Automated Document Management</h3>
+        <p class="text-[#662900] mt-1">
+          Automate document storage, retrieval, and organization to reduce delays and improve access to critical healthcare information.
         </p>
       </div>
     </div>
 
-    <!-- Service Card 2: AI-Powered Process Optimization -->
-    <div class="flex items-center rounded-lg p-4 bg-white shadow-lg border border-[#F7D48B]">
-      <img src="https://cdn-icons-png.flaticon.com/512/843/843292.png" alt="AI Optimization" class="w-16 h-16 rounded-lg object-cover">
+    <div class="flex items-center rounded-lg p-4 bg-white shadow-lg border border-[#FAEBC6]">
+      <img src="{{ url_for('static', filename='images/robotic-hand.png') }}" alt="Task Automation for Healthcare Teams" class="w-16 h-16 rounded-lg object-cover">
       <div class="ml-4">
-        <h3 class="text-xl font-semibold text-[#4B3621]">AI-Powered Process Optimization</h3>
-        <p class="text-[#4B3621] mt-1">
-          Use AI to <strong>predict patient needs, analyze medical data, and automate admin tasks</strong> like billing, documentation, and compliance reporting—saving hours of manual work.
+        <h3 class="text-xl font-semibold text-[#662900]">Task Automation</h3>
+        <p class="text-[#662900] mt-1">
+          Automate repetitive tasks like scheduling and data entry to reduce manual work and minimize human error.
         </p>
       </div>
     </div>
 
-    <!-- Service Card 3: Data Security & Compliance -->
-    <div class="flex items-center rounded-lg p-4 bg-white shadow-lg border border-[#F7D48B]">
-      <img src="https://cdn-icons-png.flaticon.com/512/3842/3842473.png" alt="Data Security" class="w-16 h-16 rounded-lg object-cover">
+    <div class="flex items-center rounded-lg p-4 bg-white shadow-lg border border-[#FAEBC6]">
+      <img src="{{ url_for('static', filename='images/nodes.png') }}" alt="Data Integration & Synchronization" class="w-16 h-16 rounded-lg object-cover">
       <div class="ml-4">
-        <h3 class="text-xl font-semibold text-[#4B3621]">Data Security & Compliance Automation</h3>
-        <p class="text-[#4B3621] mt-1">
-          Ensure <strong>HIPAA-compliant workflows</strong> with cutting-edge security solutions. Automate compliance tracking to minimize legal risks and reduce administrative workload.
+        <h3 class="text-xl font-semibold text-[#662900]">Data Integration & Synchronization</h3>
+        <p class="text-[#662900] mt-1">
+          Unify healthcare systems for seamless data integration and real-time synchronization, improving accuracy and workflow efficiency.
         </p>
       </div>
     </div>
 
-    <!-- Service Card 4: Smart Workflow Design & Implementation -->
-    <div class="flex items-center rounded-lg p-4 bg-white shadow-lg border border-[#F7D48B]">
-      <img src="https://cdn-icons-png.flaticon.com/512/3842/3842473.png" alt="Workflow Design" class="w-16 h-16 rounded-lg object-cover">
+    <div class="flex items-center rounded-lg p-4 bg-white shadow-lg border border-[#FAEBC6]">
+      <img src="{{ url_for('static', filename='images/checklist.png') }}" alt="Healthcare Workflow Review & Optimization" class="w-16 h-16 rounded-lg object-cover">
       <div class="ml-4">
-        <h3 class="text-xl font-semibold text-[#4B3621]">Smart Workflow Design & Implementation</h3>
-        <p class="text-[#4B3621] mt-1">
-          Custom-built automation strategies that <strong>seamlessly fit into your hospital, clinic, or lab.</strong> Identify inefficiencies and optimize operations for maximum productivity.
-        </p>
-      </div>
-    </div>
-
-    <!-- Service Card 5: Strategic AI & Automation Consulting -->
-    <div class="flex items-center rounded-lg p-4 bg-white shadow-lg border border-[#F7D48B]">
-      <img src="https://cdn-icons-png.flaticon.com/512/3842/3842473.png" alt="Consulting & Strategy" class="w-16 h-16 rounded-lg object-cover">
-      <div class="ml-4">
-        <h3 class="text-xl font-semibold text-[#4B3621]">Strategic AI & Automation Consulting</h3>
-        <p class="text-[#4B3621] mt-1">
-          Get expert guidance on <strong>how AI-driven automation can transform healthcare operations.</strong> Tailored solutions for small clinics to large hospitals—ensuring scalable, cost-effective improvements.
+        <h3 class="font-semibold text-xl text-[#662900]">Workflow Review & Optimization</h3>
+        <p class="mt-2 text-[#662900]">
+          I analyze your workflows, identify inefficiencies, and suggest improvements to streamline operations and boost efficiency.
         </p>
       </div>
     </div>
   </div>
 </section>
-
-<section class="py-16 px-8 bg-[#FFF2EC]">
-  <h2 class="text-4xl font-bold text-center text-[#4B3621]">Why Choose Me?</h2>
+<section class="py-16 px-8 bg-[#FFF8E7]">
+  <h2 class="text-4xl font-bold text-center text-[#662900]">Why Choose Me?</h2>
   
   <div class="mt-10 max-w-4xl mx-auto text-center">
-    <p class="text-lg text-[#4B3621]">
-      I specialize in automation—AI-driven or not—tailored for healthcare. With hands-on experience in medical imaging, automation, and data processing, I help streamline operations efficiently.
+    <p class="text-lg text-[#662900]">
+      I specialize in automation and AI-driven solutions tailored for healthcare, focusing on improving efficiency and freeing up valuable time for healthcare staff. Here’s why you should choose me:
     </p>
   </div>
 
   <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-    <div class="p-6 bg-white rounded-lg shadow-lg border border-[#F7D48B]">
-      <h3 class="font-semibold text-xl text-[#4B3621]">Healthcare Workflow Expertise</h3>
-      <p class="mt-2 text-[#4B3621]">
-        I understand hospital operations firsthand, ensuring automation fits seamlessly into existing workflows.
+    <div class="p-6 bg-white rounded-lg shadow-lg border border-[#FAEBC6]">
+      <h3 class="font-semibold text-xl text-[#662900]">Healthcare Workflow Expertise</h3>
+      <p class="mt-2 text-[#662900]">
+        With firsthand experience in medical imaging and hospital workflows, I ensure seamless integration of automation solutions without disrupting your operations.
       </p>
     </div>
 
-    <div class="p-6 bg-white rounded-lg shadow-lg border border-[#F7D48B]">
-      <h3 class="font-semibold text-xl text-[#4B3621]">Affordable, Scalable, & Modular Solutions</h3>
-      <p class="mt-2 text-[#4B3621]">
-        No overpriced software—just flexible, cost-effective solutions that grow with your needs.
+    <div class="p-6 bg-white rounded-lg shadow-lg border border-[#FAEBC6]">
+      <h3 class="font-semibold text-xl text-[#662900]">Problem-Solving & Quick Adaptability</h3>
+      <p class="mt-2 text-[#662900]">
+        I quickly understand the unique challenges of your workflows, adapting solutions to meet your specific needs and continuously improving them as we progress.
       </p>
     </div>
 
-    <div class="p-6 bg-white rounded-lg shadow-lg border border-[#F7D48B]">
-      <h3 class="font-semibold text-xl text-[#4B3621]">Problem-Solving & Quality-Driven</h3>
-      <p class="mt-2 text-[#4B3621]">
-        I don’t just automate—I solve inefficiencies with precision and a focus on quality.
+    <div class="p-6 bg-white rounded-lg shadow-lg border border-[#FAEBC6]">
+      <h3 class="font-semibold text-xl text-[#662900]">Affordable, Scalable Solutions</h3>
+      <p class="mt-2 text-[#662900]">
+        I offer cost-effective solutions that grow with your needs, ensuring that your investment in automation will continue to serve you as your operation expands.
       </p>
     </div>
 
-    <div class="p-6 bg-white rounded-lg shadow-lg border border-[#F7D48B]">
-      <h3 class="font-semibold text-xl text-[#4B3621]">Fast, Responsive, & Committed</h3>
-      <p class="mt-2 text-[#4B3621]">
-        Healthcare moves fast, and so do I. Expect quick, dedicated support when you need it most.
+    <div class="p-6 bg-white rounded-lg shadow-lg border border-[#FAEBC6]">
+      <h3 class="font-semibold text-xl text-[#662900]">Fast, Responsive, & Committed</h3>
+      <p class="mt-2 text-[#662900]">
+        I provide responsive support and fast delivery to ensure that you can adapt quickly to changes, all while maintaining a commitment to quality and reliability.
       </p>
     </div>
   </div>
 </section>
 
-<section class="py-12 px-6">
-  <h2 class="text-3xl font-semibold text-center text-[#4B3621]">How We Work Together</h2>
+
+<section class="py-12 px-6 bg-[#FFF8E7]">
+  <h2 class="text-3xl font-semibold text-center text-[#662900]">How We Work Together</h2>
   <div class="grid md:grid-cols-3 gap-8 mt-8 text-center">
     
     <div class="p-6 border rounded-lg bg-white shadow-lg">
-      <h3 class="text-xl font-semibold text-[#4B3621]">1. Discovery & Planning</h3>
-      <p class="mt-2 text-[#4B3621]">We discuss your workflow challenges and define clear objectives.</p>
+      <h3 class="text-xl font-semibold text-[#662900]">1. Discovery & Planning</h3>
+      <p class="mt-2 text-[#662900]">You share your workflow challenges, and together we define clear goals and objectives for your custom solution.</p>
     </div>
 
     <div class="p-6 border rounded-lg bg-white shadow-lg">
-      <h3 class="text-xl font-semibold text-[#4B3621]">2. Custom Solution Design</h3>
-      <p class="mt-2 text-[#4B3621]">I design a scalable, efficient solution tailored to your needs.</p>
+      <h3 class="text-xl font-semibold text-[#662900]">2. Custom Solution Design</h3>
+      <p class="mt-2 text-[#662900]">I craft a scalable, efficient solution tailored to your unique needs, ensuring it fits seamlessly into your existing workflow.</p>
     </div>
 
     <div class="p-6 border rounded-lg bg-white shadow-lg">
-      <h3 class="text-xl font-semibold text-[#4B3621]">3. Seamless Deployment & Support</h3>
-      <p class="mt-2 text-[#4B3621]">I implement, test, and fine-tune the solution with ongoing support.</p>
+      <h3 class="text-xl font-semibold text-[#662900]">3. Seamless Deployment & Support</h3>
+      <p class="mt-2 text-[#662900]">I implement the solution with thorough testing and provide ongoing support to ensure long-term success.</p>
     </div>
   </div>
 </section>
 
-<section class="py-16 bg-[#4B3621] text-white text-center">
+
+<section class="py-16 bg-[#662900] text-white text-center">
   <h2 class="text-3xl font-bold">Let's Improve Healthcare Together</h2>
   <p class="mt-2">Contact me today to discuss your project and explore AI-driven solutions.</p>
-  <a href="/contact" class="mt-4 inline-block px-6 py-3 bg-[#F7D48B] text-[#4B3621] rounded hover:bg-[#A7C7E7]">
+  <a href="/contact" class="mt-4 inline-block px-6 py-3 bg-[#CB682A] text-white rounded hover:bg-[#662900]">
     Get in Touch
   </a>
 </section>
-
-</div>
-  <!-- CTA Button -->
-  <div class="text-center mt-12">
-    <a href="contact.html" class="bg-[#4B3621] text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-[#A7C7E7] transition">
-      Get in Touch
-    </a>
-  </div>
 
 {% endblock %}

@@ -3,7 +3,7 @@
 {% if is_external %}
 <a href="{{ project.url }}" target="_blank" class="block h-full">
 {% endif %}
-    <div class="bg-white shadow-md border border-gray-200 p-4 relative hover:shadow-lg transition-all h-full flex flex-col justify-between rounded-lg">
+    <div class="bg-[#FFF8E7] shadow-md border-2 border-[#CB682A] p-4 relative hover:shadow-lg transition-all h-full flex flex-col justify-between rounded-lg">
         
         <!-- Badge -->
         <div class="flex justify-left">
@@ -11,26 +11,24 @@
         </div>
 
         <!-- Title -->
-        <h5 class="text-base font-semibold text-gray-800 text-left mt-2">
+        <h5 class="text-base font-semibold text-[#662900] text-left mt-2">
             {{ project.name }}
         </h5>
 
         <!-- Description -->
-        <p class="text-sm text-gray-600 mt-2 text-left">
+        <p class="text-sm text-[#662900] mt-2 text-left">
             {{ project.description }}
         </p>
 
         <!-- Technologies -->
-        <p class="text-xs text-gray-400 mt-2 text-left">
+        <p class="text-xs text-[#662900] mt-2 text-left">
             {{ project.technologies }}
         </p>
 
         <!-- Link Icon if External URL exists -->
         {% if is_external %}
-        <div class="absolute bottom-2 right-2 text-gray-500">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M12.293 3.293a1 1 0 011.414 0L17 6.586V7a1 1 0 11-2 0V5.414L13.707 4H7a1 1 0 010-2h5a1 1 0 01.293.293zM6 5a1 1 0 011 1v7a1 1 0 001 1h7a1 1 0 110 2H8a3 3 0 01-3-3V6a1 1 0 011-1z" clip-rule="evenodd" />
-            </svg>
+        <div class="absolute bottom-2 right-2 text-[#CB682A]">
+            <img src="{{ url_for('static', filename='images/github-mark.PNG') }}"  class="h-5 w-5">
         </div>
         {% endif %}
     </div>

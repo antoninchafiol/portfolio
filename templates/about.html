@@ -1,261 +1,135 @@
 {% extends "base.html" %}
-{% block title %}Home - Freelancer Portfolio{% endblock %}
+{% block title %}AFI - About{% endblock %}
 {% block content %}
-  <!-- Who You Are -->
-  <section class="container mx-auto px-6 py-16">
-    <div class="flex flex-col md:flex-row items-center">
-      <!-- Left Text -->
-      <div class="md:w-1/2 space-y-6">
-        <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-yellow-400">Who I Am</h2>
-        <p class="text-gray-700">
-          I'm Antonin, a dedicated Healthcare IT freelancer with a passion for transforming patient care through technology.
-          I specialize in automating and optimizing complex workflows using a blend of high-level languages for rapid development and low-level programming for fine-tuned efficiency.
-          My hands-on experience with GE Healthcare’s PACS systems, 
-          combined with specialized training in radiology and hospital patient workflows, 
-          empowers me to design robust, tailored solutions that adhere to strict industry standards. 
-          Recognized for my innovative approach—winning the TUH Hackathon and speaking at key healthcare IT and AI conferences—I integrate explainable AI and rigorous data security measures to enhance medical workflows and system performance. 
-          Let's work together to bring precision, efficiency, and cutting-edge innovation to healthcare technology.
-        </p>
-        <p class="text-gray-700">
-          I've worked with multiple hospitals during my time at GE, won TUH Hackaton and participate to conference around Healthcare IT and AI.
-        </p>
-      </div>
-      <!-- Right Image -->
-      <div class="md:w-1/2 mt-10 md:mt-0">
-        <img src="https://placehold.co/600x400/EEE/31343C" alt="Healthcare IT" class="rounded-lg shadow-lg w-full">
-      </div>
+<section class="container mx-auto px-6 py-16">
+  <div class="flex flex-col md:flex-row items-center">
+    <!-- Textual Introduction -->
+    <div class="md:w-1/2 space-y-6">
+      <h2 class="text-3xl font-bold text-[#FFF8E7] bg-[#662900] border-b-2 p-2 rounded-lg">
+        Who I Am
+      </h2>
+      <p class="text-[#662900]">
+        I'm Antonin, a dedicated Healthcare IT freelancer blending a strong technical foundation with real-world experience in medical imaging and hospital systems. With years spent maintaining GE Healthcare’s PACS systems and a deep understanding of radiology workflows, I build smart, efficient solutions tailored to the needs of healthcare professionals.
+      </p>
+      <p class="text-[#662900]">
+        Specializing in automation and AI, I optimize complex workflows using high-level languages for rapid prototyping and low-level programming for performance-critical components. My approach combines empathy with engineering—empowering healthcare staff with reliable, explainable, and secure tools to inherently improve patient care.
+      </p>
+      <p class="text-[#662900]">
+        I've worked with multiple hospitals during my tenure at GE, won the TUH Hackathon, and participated in key Healthcare IT and AI conferences. Let’s collaborate to drive healthcare forward with innovation that truly works for people.
+      </p>
     </div>
-  </section>
-
-  <div class="mx-auto w-16 border-t-2 border-gray-300 mt-6 pb-6"></div>
-  
-  <section class="space-y-6">
-    <!-- Row: Two cards -->
-     <div class="flex">
-    <h2 class="text-xl font-bold text-gray-900 mx-auto">Main Skills & Technologies</h2>
-  </div>
-    <div class="flex justify-center gap-6">
-      <div class="w-full max-w-sm bg-white p-6 shadow rounded">
-        <h2 class="text-xl font-bold mb-2">Python</h2>
-        <p>Core scripting & ML language for automation.</p>
-      </div>
-      <div class="w-full max-w-sm bg-white p-6 shadow rounded">
-        <h2 class="text-xl font-bold mb-2">FastAPI / Flask</h2>
-        <p>Lightweight API framework for rapid prototyping.</p>
-      </div>
-    </div>
-    <!-- Row: Single card centered -->
-    <div class="flex justify-center">
-      <div class="w-full max-w-sm bg-white p-6 shadow rounded">
-        <h2 class="text-xl font-bold mb-2">Rust / Java</h2>
-        <p>Lower-levels Programming languages for further optimization after python prototyping</p>
-      </div>
-    </div>
-    <!-- Row: Two cards -->
-    <div class="flex justify-center gap-6">
-      <div class="w-full max-w-sm bg-white p-6 shadow rounded">
-        <h2 class="text-xl font-bold mb-2">TensorFlow / PyTorch / Scikit-Learn</h2>
-        <p>AI/ML for predictive analytics & optimization.</p>
-      </div>
-      <div class="w-full max-w-sm bg-white p-6 shadow rounded">
-        <h2 class="text-xl font-bold mb-2">Pandas & NumPy</h2>
-        <p>Data processing & numerical analysis.</p>
-      </div>
-    </div>
-    <!-- Row: Single card centered -->
-    <div class="flex justify-center">
-      <div class="w-full max-w-sm bg-white p-6 shadow rounded">
-        <h2 class="text-xl font-bold mb-2">Docker</h2>
-        <p>Containerization for deployment & consistency.</p>
-      </div>
-    </div>
-    <!-- Row: Two cards -->
-    <div class="flex justify-center gap-6">
-      <div class="w-full max-w-sm bg-white p-6 shadow rounded">
-        <h2 class="text-xl font-bold mb-2">Tailwind CSS</h2>
-        <p>Minimalist, responsive front-end styling.</p>
-      </div>
-      <div class="w-full max-w-sm bg-white p-6 shadow rounded">
-        <h2 class="text-xl font-bold mb-2">Healthcare Workflow Knowledge</h2>
-        <p>PACS/RIS/HIS & EHR with GDPR/HIPAA regulation.</p>
-      </div>
-    </div>
-  </section>
     
-  <div class="mx-auto w-16 border-t-2 border-gray-300 mt-6 pt-6 pb-6"></div>
-
-  <section class="py-12 bg-gray-100">
-    <div class="max-w-6xl mx-auto flex">
-      <!-- Left Sidebar: Education -->
-      <div class="w-1/4 bg-gray-100 p-6 rounded-lg">
-        <p class="text-l font-semibold text-blue-900 border-b-2 border-yellow-400">Education</p>
-        <ul class="mt-4 space-y-4">
-          <li>
-            <button id="education1" class="w-full text-left text-gray-700 hover:text-yellow-400 focus:outline-none">
-              <span class="font-medium">Bachelor of Science in Computer Science</span>
-            </button>
-          </li>
-          <li>
-            <button id="education2" class="w-full text-left text-gray-700 hover:text-yellow-400 focus:outline-none">
-              <span class="font-medium">Master's in Health Informatics</span>
-            </button>
-          </li>
-          <li>
-            <button id="education3" class="w-full text-left text-gray-700 hover:text-yellow-400 focus:outline-none">
-              <span class="font-medium">Certified Healthcare Technology Specialist</span>
-            </button>
-          </li>
-        </ul>
+    <!-- Visual Column: Headshot & Illustration -->
+    <div class="md:w-1/2 flex flex-col md:flex-row items-center gap-8 mt-10 md:mt-0">
+      <!-- Professional Headshot Container -->
+      <div class="flex-1 flex justify-center">
+        <!-- The headshot fills its container's width up to a maximum value -->
+        <img src="{{ url_for('static', filename='images/perso_1.jpg') }}" alt="Antonin Headshot" class="w-full max-w-[300px] h-auto rounded-full shadow-lg object-cover">
       </div>
-  
-      <!-- Middle Section: Content Display (Both Education and Experience) -->
-      <div class="w-2/4 bg-gray-100 p-6 rounded-lg ">
-        <h3 id="title" class="text-xl font-semibold">Select an item to view more details</h3>
-        <p id="content" class="text-gray-700 mt-2">Click on an item to see detailed information.</p>
-      </div>
-  
-      <!-- Right Sidebar: Experience -->
-      <div class="w-1/4 bg-gray-100 p-6 rounded-lg">
-        <p class="text-l font-semibold text-blue-900 border-b-2 border-yellow-400">Experience</p>
-        <ul class="mt-4 space-y-4">
-          <li>
-            <button id="experience1" class="w-full text-left text-gray-700 hover:bg-yellow-400 bg-transparent focus:outline-none">
-              <span class="font-medium">Software Engineer at XYZ Corp</span>
-            </button>
-          </li>
-          <li>
-            <button id="experience2" class="w-full text-left text-gray-700 hover:text-yellow-400 focus:outline-none">
-              <span class="font-medium">Healthcare Data Analyst at ABC Health</span>
-            </button>
-          </li>
-          <li>
-            <button id="experience3" class="w-full text-left text-gray-700 hover:text-yellow-400 focus:outline-none">
-              <span class="font-medium">Freelance Healthcare Technologist</span>
-            </button>
-          </li>
-        </ul>
+      <!-- Ghibli-Styled Illustration Container -->
+      <div class="flex-1 flex justify-center pl-6">
+        <!-- The illustration fills its container's width up to a max value -->
+        <img src="{{ url_for('static', filename='images/ghibli_2.PNG') }}" alt="Healthcare IT Illustration" class="w-full max-w-[400px] h-auto rounded-lg shadow-lg object-cover">
       </div>
     </div>
-  </section>
-
-  
-  <script>
-    // Content for Education
-    const educationContent = {
-      education1: `
-        <h3 class="text-xl font-semibold text-blue-900">Bachelor of Science in Computer Science</h3>
-        <p class="text-gray-600 mt-2">XYZ University, 2015-2019</p>
-        <p class="mt-2 text-gray-700">Focused on machine learning, data analysis, and programming, which later evolved into my passion for AI in healthcare.</p>
-      `,
-      education2: `
-        <h3 class="text-xl font-semibold text-blue-900">Master's in Health Informatics</h3>
-        <p class="text-gray-600 mt-2">ABC University, 2020-2022</p>
-        <p class="mt-2 text-gray-700">Specialized in the integration of technology with healthcare, focusing on electronic health records, automation, and healthcare system improvements.</p>
-      `,
-      education3: `
-        <h3 class="text-xl font-semibold text-blue-900">Certified Healthcare Technology Specialist</h3>
-        <p class="text-gray-600 mt-2">Certification Institute, 2023</p>
-        <p class="mt-2 text-gray-700">Focused on healthcare technologies, HIPAA compliance, and the management of healthcare information systems.</p>
-      `
-    };
-  
-    // Content for Experience
-    const experienceContent = {
-      experience1: `
-        <h3 class="text-xl font-semibold text-blue-900">Software Engineer at XYZ Corp</h3>
-        <p class="text-gray-600 mt-2">2019-2021</p>
-        <p class="mt-2 text-gray-700">Developed and maintained software systems that improved workflow efficiency in large healthcare systems.</p>
-      `,
-      experience2: `
-        <h3 class="text-xl font-semibold text-blue-900">Healthcare Data Analyst at ABC Health</h3>
-        <p class="text-gray-600 mt-2">2021-2023</p>
-        <p class="mt-2 text-gray-700">Analyzed and visualized patient data to support hospital decision-making and improve operational performance.</p>
-      `,
-      experience3: `
-        <h3 class="text-xl font-semibold text-blue-900">Freelance Healthcare Technologist</h3>
-        <p class="text-gray-600 mt-2">2023-Present</p>
-        <p class="mt-2 text-gray-700">Providing tailored solutions for clinics and healthcare providers, focusing on workflow automation and system optimization.</p>
-      `
-    };
-  
-    // Event listeners for Education
-    document.getElementById('education1').addEventListener('click', () => {
-      document.getElementById('title').innerHTML = 'Education Details';
-      document.getElementById('content').innerHTML = educationContent.education1;
-    });
-    document.getElementById('education2').addEventListener('click', () => {
-      document.getElementById('title').innerHTML = 'Education Details';
-      document.getElementById('content').innerHTML = educationContent.education2;
-    });
-    document.getElementById('education3').addEventListener('click', () => {
-      document.getElementById('title').innerHTML = 'Education Details';
-      document.getElementById('content').innerHTML = educationContent.education3;
-    });
-  
-    // Event listeners for Experience
-    document.getElementById('experience1').addEventListener('click', () => {
-      document.getElementById('title').innerHTML = 'Experience Details';
-      document.getElementById('content').innerHTML = experienceContent.experience1;
-    });
-    document.getElementById('experience2').addEventListener('click', () => {
-      document.getElementById('title').innerHTML = 'Experience Details';
-      document.getElementById('content').innerHTML = experienceContent.experience2;
-    });
-    document.getElementById('experience3').addEventListener('click', () => {
-      document.getElementById('title').innerHTML = 'Experience Details';
-      document.getElementById('content').innerHTML = experienceContent.experience3;
-    });
-  </script>
-  
-  <div class="mx-auto w-16 border-t-2 border-gray-300 mt-6 pt-6 pb-6"></div>
-  <!-- Certifications & Credentials -->
-  <section class="py-8">
-    <h2 class="text-3xl font-bold text-gray-900 text-center mb-6">Certifications & Credentials</h2>
-    <div class="w-full max-w-md mx-auto space-y-4 p-4">
-        
-        <!-- NVIDIA Certification -->
-        <div class="bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center">
-            <figure class="flex flex-col items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nvidia_logo.svg/320px-Nvidia_logo.svg.png" 
-                     alt="NVIDIA" class="h-14">
-                <figcaption class="text-md font-medium mt-3">Fundamentals of Deep Learning</figcaption>
-            </figure>
-        </div>
-
-        <!-- DeepLearning.AI Certification -->
-        <div class="bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center">
-            <figure class="flex flex-col items-center">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0CUMZvcSWc_WAjOxzJU-l7eatNWUP8AN33w&s" 
-                     alt="DeepLearning.AI" class="h-14">
-                <figcaption class="text-md font-medium mt-3">Deep Learning Specialization</figcaption>
-            </figure>
-        </div>
-
-        <!-- IBM AI Certification -->
-        <div class="bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center">
-            <figure class="flex flex-col items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" 
-                     alt="IBM" class="h-14">
-                <figcaption class="text-md font-medium mt-3">IBM Data Engineer</figcaption>
-            </figure>
-        </div>
-    </div>
+  </div>
 </section>
 
-<div class="mx-auto w-16 border-t-2 border-gray-300 mt-6 pt-6 pb-6"></div>
-  <!-- Contact Section -->
-  <section class=" text-blue py-12">
-    <div class="container mx-auto text-center">
-      <h2 class="text-2xl font-bold mb-4">Let's Connect</h2>
-      <p class="mb-6">Interested in working together? Reach out!</p>
-      <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-        <a href="mailto:your-email@example.com" class="bg-gray-100 text-blue-600 px-6 py-3 rounded-lg font-semibold">
-          Email Me
-        </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="bg-gray-100 text-blue-600 px-6 py-3 rounded-lg font-semibold">
-          Connect on LinkedIn
-        </a>
-      </div>
+
+  
+  <div class="mx-auto w-16 border-t-2 border-[#CB682A] mt-6 pb-6"></div>
+<section class="space-y-4">
+  <h2 class="text-2xl font-bold text-center text-[#662900]">Technologies & Skills</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-6 items-center">
+    <div class="flex flex-col items-center bg-[#FFF8E7] p-6 shadow rounded">
+      <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <rect width="48" height="48" fill="#FFF8E7"/>
+        <!-- Simple cross design -->
+        <rect x="20" y="10" width="8" height="28" fill="#662900"/>
+        <rect x="10" y="20" width="28" height="8" fill="#662900"/>
+      </svg>
+      <p class="text-[#662900] font-bold">Healthcare Workflow</p>
+      <p class="mt-1 text-sm text-gray-600">Redesign & Optimization</p>
     </div>
-  </section>
-  {% endblock %}
+    <div class="flex flex-col items-center bg-[#FFF8E7] p-6 shadow rounded">
+      <div class="mb-2">
+        <img src="{{ url_for('static', filename='images/python-logo-only.svg') }}" alt="Python Icon" width="48" height="48">
+      </div>
+      <p class="text-[#662900] font-bold">Python</p>
+      <p class="mt-1 text-sm text-gray-600">Development</p>
+    </div>
+    <div class="flex flex-col items-center bg-[#FFF8E7] p-6 shadow rounded">
+      <div class="mb-2">
+        <img src="{{ url_for('static', filename='images/rust-logo-128x128.png') }}" alt="High-Performance Icon" width="48" height="48">
+      </div>
+      <p class="text-[#662900] font-bold">Rust / C#</p>
+      <p class="mt-1 text-sm text-gray-600">High-Performance Programming</p>
+    </div>
+    <div class="flex flex-col items-center bg-[#FFF8E7] p-6 shadow rounded">
+      <div class="mb-2">
+        <img src="{{ url_for('static', filename='images/Tensorflow_logo.svg.png') }}" alt="AI Icon" width="48" height="48">
+      </div>
+      <p class="text-[#662900] font-bold">TF/PyTorch</p>
+      <p class="mt-1 text-sm text-gray-600">AI/ML</p>
+    </div>
+    <div class="flex flex-col items-center bg-[#FFF8E7] p-6 shadow rounded">
+      <div class="mb-2">
+        <img src="{{ url_for('static', filename='images/icon_fastapipng.png') }}" alt="API Icon" width="48" height="48">
+      </div>
+      <p class="text-[#662900] font-bold">FastAPI/Flask</p>
+      <p class="mt-1 text-sm text-gray-600">+ FHIR/HL7 Integration</p>
+    </div>
+    <div class="flex flex-col items-center bg-[#FFF8E7] p-6 shadow rounded">
+      <div class="mb-2">
+        <img src="{{ url_for('static', filename='images/docker-mark-blue.PNG') }}" alt="Docker Icon" width="48" height="48">
+      </div>
+      <p class="text-[#662900] font-bold">Docker</p>
+      <p class="mt-1 text-sm text-gray-600">Containerization</p>
+    </div>
+  </div>
+</section>
+
+
+<div class="mx-auto w-16 border-t-2 border-[#CB682A] mt-6 pt-12 "></div>
+
+<section >
+  <h2 class="text-2xl font-bold text-[#662900] text-center mb-6">Certifications & Credentials</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-6 items-center ">
+    <div class="bg-[#FFF8E7] shadow rounded-lg p-4 flex flex-col items-center text-center">
+        <figure class="flex flex-col items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nvidia_logo.svg/320px-Nvidia_logo.svg.png" alt="NVIDIA" class="h-14">
+            <figcaption class="text-md font-medium mt-3 text-[#662900]">Fundamentals of Deep Learning</figcaption>
+        </figure>
+    </div>
+    <div class="bg-[#FFF8E7] shadow rounded-lg p-4 flex flex-col items-center text-center">
+        <figure class="flex flex-col items-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0CUMZvcSWc_WAjOxzJU-l7eatNWUP8AN33w&s" alt="DeepLearning.AI" class="h-14">
+            <figcaption class="text-md font-medium mt-3 text-[#662900]">Deep Learning Specialization</figcaption>
+        </figure>
+    </div>
+    <div class="bg-[#FFF8E7] shadow rounded-lg p-4 flex flex-col items-center text-center">
+        <figure class="flex flex-col items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="h-14">
+            <figcaption class="text-md font-medium mt-3 text-[#662900]">IBM Data Engineer</figcaption>
+        </figure>
+    </div>
+  </div>
+</section>
+
+<div class="mx-auto w-16 border-t-2 border-[#CB682A] mt-6"></div>
+
+<section class="py-12 bg-[#FFF8E7]">
+  <div class="container mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-4 text-[#662900]">Let's Connect</h2>
+    <p class="mb-6 text-[#662900]">Interested in working together? Reach out!</p>
+    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+      <a href="mailto:contact@antoninchafiol.com" class="bg-[#662900] text-[#FFF8E7] px-6 py-3 rounded-lg font-semibold  hover:opacity-80 transition-opacity duration-300">
+        Email Me
+      </a>
+      <a href="https://www.linkedin.com/in/antonin-chafiol-771b5b210/" target="_blank" class="bg-[#662900] text-[#FFF8E7] px-6 py-3 rounded-lg font-semibold hover:opacity-80 transition-opacity duration-300">
+        Connect on LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

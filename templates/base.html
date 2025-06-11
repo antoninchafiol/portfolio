@@ -44,76 +44,77 @@
 
 </head>
 
-
-<body class="bg-[#FFF2EC] text-[#4B3621]">
-  <!-- Navigation Bar -->
-  <nav id="navbar" class="w-full z-50 transition-all duration-500 shadow bg-transparent border-b border-gray-600/50">
+<body class="bg-[#FFF8E7] text-[#2d2d2d]">
+  
+  <nav id="navbar" class="w-full z-50 transition-all duration-500 shadow bg-transparent border-b border-[#D67236]/50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         
-        <!-- Logo -->
-        <a href="/" class="text-2xl font-bold text-[#4B3621] transition duration-300 hover:text-[#A7C7E7] flex items-center">
+      
+        <a href="/" class="text-2xl font-bold text-[#662900] transition duration-300 hover:text-[#8b4e2d] flex items-center">
           <img src="{{ url_for('static', filename='images/afi_logo_nobg.PNG') }}" alt="AFI" class="h-8 mr-2">
           Antonin Chafiol
         </a>
-        <!-- Desktop Menu -->
+        
         <ul class="hidden md:flex space-x-8 transition duration-300">
             <li>
-              <a href="/about" class="pb-1 border-b-2 border-transparent hover:border-[#F7D48B] transition duration-300">
-                01. About
+              <a href="/about" class="text-l pb-1 border-b-2 border-transparent hover:border-[#d67236] text-[#662900] transition duration-300">
+                <b>About</b>
               </a>
             </li>
             <li>
-              <a href="/services" class="pb-1 border-b-2 border-transparent hover:border-[#F7D48B] transition duration-300">
-                02. Services
+              <a href="/services" class="text-l pb-1 border-b-2 border-transparent hover:border-[#d67236] text-[#662900] transition duration-300">
+                <b>Services</b>
               </a>
             </li>
             <li>
-              <a href="/portfolio" class="pb-1 border-b-2 border-transparent hover:border-[#F7D48B] transition duration-300">
-                03. Portfolio
+              <a href="/portfolio" class="text-l pb-1 border-b-2 border-transparent hover:border-[#d67236] text-[#662900] transition duration-300">
+                <b>Portfolio</b>
               </a>
             </li>
-            <li>
-              <a href="/blog" class="pb-1 border-b-2 border-transparent hover:border-[#F7D48B] transition duration-300">
-                04. Blog
+            <!-- <li>
+              <a href="/blog" class="text-l pb-1 border-b-2 border-transparent hover:border-[#d67236] text-[#662900] transition duration-300">
+                <b>Blog</b>
               </a>
-            </li>
+            </li> -->
             <li>
-              <a href="/contact" class="pb-1 border-b-2 border-transparent hover:border-[#F7D48B] transition duration-300">
-                05. Contact
+              <a href="/contact" class="text-l pb-1 border-b-2 border-transparent hover:border-[#d67236] text-[#662900] transition duration-300">
+              <b>Contact</b>
               </a>
             </li>
         </ul>
 
-        <!-- Mobile Menu Button -->
-        <button id="menu-btn" class="md:hidden text-[#F7D48B] focus:outline-none transition duration-300 hover:text-[#F7D48B]">
+        
+        <button id="menu-btn" class="md:hidden text-[#d67236] focus:outline-none transition duration-300 hover:text-[#d67236]">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
         </button>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#4B3621] text-[#FFF2EC] absolute w-full top-full left-0 text-center py-4 space-y-2">
-        <a href="/about" class="block py-2 transition duration-300 hover:text-[#A7C7E7]">01. About</a>
-        <a href="/services" class="block py-2 transition duration-300 hover:text-[#A7C7E7]">02. Services</a>
-        <a href="/portfolio" class="block py-2 transition duration-300 hover:text-[#A7C7E7]">03. Portfolio</a>
-        <a href="/blog" class="block py-2 transition duration-300 hover:text-[#A7C7E7]">04. Blog</a>
-        <a href="/contact" class="block py-2 transition duration-300 hover:text-[#A7C7E7]">05. Contact</a>
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-[#fff8e7] text-[#662900] absolute w-full top-full left-0 text-center py-4 space-y-2">
+        <a href="/about" class="block py-2 transition duration-300 hover:text-[#d67236]">About</a>
+        <a href="/services" class="block py-2 transition duration-300 hover:text-[#d67236]">Services</a>
+        <a href="/portfolio" class="block py-2 transition duration-300 hover:text-[#d67236]">Portfolio</a>
+        <a href="/blog" class="block py-2 transition duration-300 hover:text-[#d67236]">Blog</a>
+        <a href="/contact" class="block py-2 transition duration-300 hover:text-[#d67236]">Contact</a>
     </div>
   </nav>
 
-  <!-- Main Content -->
+  
   <div id="main-content" class="{% if is_homepage %}w-full p-0{% else %}w-full container items-center mx-auto p-8{% endif %}">
     {% block content %}{% endblock %}
   </div>
 
-  <footer class="bg-[#F7D48B] shadow mt-8">
+  <footer class="bg-[#FFF8E7] mt-8 border-t-2 border-[#662900]">
     <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-sm text-[#4B3621]">&copy; 2025 Your Company. All rights reserved.</p>
+      <p class="text-sm text-[#662900]">&copy; 2025 AFI Antonin Chafiol. All rights reserved.</p>
     </div>
   </footer>
+  
 
-  <!-- Mobile Menu Script -->
+
+  
   <script>
     document.getElementById('menu-btn').addEventListener('click', function () {
       document.getElementById('mobile-menu').classList.toggle('hidden');
@@ -128,9 +129,9 @@
         const currentScrollY = window.scrollY;
 
         if (currentScrollY > 50) {
-            navbar.classList.add("bg-[#A7C7E7]/90", "backdrop-blur-md");
+            navbar.classList.add("bg-[#662900]/90", "backdrop-blur-md");
         } else {
-            navbar.classList.remove("bg-[#A7C7E7]/90", "backdrop-blur-md");
+            navbar.classList.remove("bg-[#662900]/90", "backdrop-blur-md");
         }
 
         if (currentScrollY > lastScrollY) {

@@ -1,29 +1,33 @@
 {% for project in projects %}
 <!-- Project Card -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden {% if project.hidden %}hidden{% endif %}">
-    <div class="flex flex-col md:flex-row">
-        <!-- Left Column: Issue/Problem -->
-        <div class="p-6 bg-gray-50 w-full md:w-1/2">
-            <h3 class="text-xl font-semibold text-gray-800 mb-3">{{ project.name }}</h3>
-            <p class="text-gray-600 mb-4">{{ project.description }}</p>
-            <ul class="list-disc list-inside text-gray-600">
-                {% for tech in project.tech %}
-                    <li>{{ tech }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-
-        <!-- Right Column: Solution/Outcome -->
-        <div class="p-6 bg-white w-full md:w-1/2">
-            <h3 class="text-xl font-semibold text-gray-800 mb-3">Solution/Outcome</h3>
-            <p class="text-gray-600 mb-4">{{ project.details }}</p>
-            <ul class="list-disc list-inside text-gray-600">
-                <li><strong>Category:</strong> {{ project.category }}</li>
-                <li><strong>Impact:</strong> {{ project.impact }}</li>
-            </ul>
-            <a href="{{ project.github_url }}" class="text-blue-600 hover:underline mt-4 block">View on GitHub</a>
-            <a href="{{ project.case_study_url }}" class="text-blue-600 hover:underline mt-2 block">Read the Case Study</a>
-        </div>
+<div class="bg-[#FFF8E7] rounded-lg shadow-lg overflow-hidden {% if project.hidden %}hidden{% endif %}">
+  <div class="flex flex-col md:flex-row">
+    <!-- Left Column: Issue/Problem -->
+    <div class="p-6 bg-[#FAEAC6] w-full md:w-1/2">
+      <h3 class="text-xl font-semibold text-[#662900] mb-3">{{ project.name }}</h3>
+      <p class="text-[#662900] mb-4">{{ project.description }}</p>
+      <ul class="list-disc list-inside text-[#662900]">
+        {% for tech in project.tech %}
+          <li>{{ tech }}</li>
+        {% endfor %}
+      </ul>
     </div>
+
+    <!-- Right Column: Solution/Outcome -->
+    <div class="p-6 bg-[#FFF8E7] w-full md:w-1/2">
+      <h3 class="text-xl font-semibold text-[#662900] mb-3">Solution/Outcome</h3>
+      <p class="text-[#662900] mb-4">{{ project.details }}</p>
+      <ul class="list-disc list-inside text-[#662900]">
+        <li><strong>Category:</strong> {{ project.category }}</li>
+        <li><strong>Impact:</strong> {{ project.impact }}</li>
+      </ul>
+      <a href="{{ project.github_url }}" class="text-[#CB682A] hover:underline mt-4 block">
+        View on GitHub
+      </a>
+      <a href="{{ project.case_study_url }}" class="text-[#CB682A] hover:underline mt-2 block">
+        Read the Case Study
+      </a>
+    </div>
+  </div>
 </div>
 {% endfor %}

@@ -7,45 +7,41 @@ def index():
     return render_template("index.html", is_homepage=True)
 
 
-# Primary Color: Dark Blue (#003366)
-# Accent Color: Coffee Brown (#6F4F28)
-# Neutral Background: Light Grey (#F0F0F0) or Off-White (#E8E8E8)
 
-
-# Portfolio page: returns full page or partial update via HTMX
 healthcare_projects = [
     {
         "name": "AI-Powered No-Show Prediction",
-        "image": "https://via.placeholder.com/300x200",
+        "image": "images/nsp.png",
         "issue": "Huge amount of time lost due to preparing for a patient that'll not come to an appointment.",
-        "tech": "Python, Pandas, TensorFlow",
+        "tech": "Python, FastAPI, Pandas, TensorFlow",
         "resolution": "Implemented an AI-driven API that trains on specific data and predicts if a patient will attend with a High, Medium or Low probability.",
-        "github_url": "#"
+        "github_url": ""
     },
     {
         "name": "Healthcare Virtual Library",
-        "image": "https://via.placeholder.com/300x200",
-        "issue": "Inefficient hospital workflow causing operational delays.",
-        "tech": "JavaScript, Node.js, React",
-        "resolution": "Developed an integrated dashboard to streamline tasks, cutting processing time by 35%.",
-        "github_url": "#"
+        "image": "images/vl.png",
+        "issue": "Too many papers scattered aruond the places without a quick way to access them.",
+        "tech": "Python, Rust, Postgres",
+        "resolution": "Developing an optimized library that can be accessed from website or with phone using QR Codes or NFC tags",
+        "github_url": ""
     },
     {
-        "name": "ECG/EKG Myocardial Ischemia Prediction",
-        "image": "https://via.placeholder.com/300x200",
-        "issue": "Lack of real-time data affecting patient monitoring.",
-        "tech": "IoT, MQTT, AWS",
-        "resolution": "Deployed a real-time system to track vital signs, enabling prompt intervention.",
-        "github_url": "#"
+    "name": "ECG/EKG Myocardial Ischemia Prediction",
+    "image": "images/ecg.jpg",
+    "issue": "Traditional systems lacked real-time alerting, delaying critical interventions during ischemic events.",
+    "tech": "Python, Tensorflow",
+    "resolution": "Built as a challenge to comprehend and test ischemia prediction, to further be used/implemented for helping clinicians to detect and respond to ischemic patterns within seconds.",
+    "github_url": "https://github.com/antoninchafiol/ECG_Myocardial_Infarction"
     },
     {
-        "name": "Teachable Robots",
-        "image": "https://via.placeholder.com/300x200",
-        "issue": "Lack of quick response in dynamic environments.",
-        "tech": "IoT, MQTT, AWS",
-        "resolution": "Deployed a system that learns from user input to automate repetitive tasks.",
-        "github_url": "#"
+    "name": "Learnable Machines",
+    "image": "images/LM.png",
+    "issue": "Manual workflows struggled to adapt in environments requiring fast decision-making and user feedback.",
+    "tech": "C#, C# .NET, Python, TensorFlow",
+    "resolution": "Created an adaptive automation system that continuously learned from user interactions, using lightweight ML models to predict and perform repetitive tasks.",
+    "github_url": ""
     }
+
 ]
 
 other_projects = [
@@ -54,19 +50,21 @@ other_projects = [
         "category": "AI - Computer Vision",
         "description": "Tried to get the highest accuracy on the CIFAR10 Dataset without changing any data.",
         "technologies": "Python, TensorFlow", 
-        "url" :"hhtps://google.com",
+        "url" :"https://github.com/antoninchafiol/cifar10",
     },
     {
         "name": "COVID Data Analysis",
         "category": "Data Analysis",
         "description": "Tested the COVID dataset and analyzed the content to output insightful plots.",
-        "technologies": "Python, Pandas, Matplotlib"
+        "technologies": "Python, Pandas, Matplotlib",
+        "url":"https://github.com/antoninchafiol/CoviEDA"
     },
     {
         "name": "AI Classification of Disaster Tweets",
         "category": "AI - Natural Language Processing",
         "description": "Preprocessed and classified tweets to detect disaster-related content using from-scratch AI modelling.",
-        "technologies": "Python, TensorFlow"
+        "technologies": "Python, TensorFlow",
+        "url":"https://github.com/antoninchafiol/DisasterTweet"
     },
     {
         "name": "AI Sign Language Detection",
@@ -77,14 +75,15 @@ other_projects = [
     {
         "name": "AI Voice Activated Commands",
         "category": "AI - Computer Vision/Speech Recognition",
-        "description": "Detected spoken words to activate specific routines.",
+        "description": "Detecting spoken words to activate specific routines.",
         "technologies": "Python, TensorFlow"
     },
     {
         "name": "Solar Powerplant Output Prediction",
         "category": "Machine Learning",
         "description": "Used machine learning to predict solar powerplant output based on historical data.",
-        "technologies": "Python, TensorFlow"
+        "technologies": "Python, TensorFlow",
+        "url":"https://github.com/antoninchafiol/SolarPW"
     },
     {
         "name": "Automatic Robots for Payment",
@@ -96,12 +95,12 @@ other_projects = [
         "name": "Logistic Automation",
         "category": "Video Games",
         "description": "Automated employee admissions and inventory tracking using Google Sheets/Form and Discord bot commands.",
-        "technologies": "Google Sheets/Form, Python, JS, Discord"
+        "technologies": "Google Sheets/Form, Python, JavaScript, Discord"
     },
     {
         "name": "Ansible automation",
         "category": "Automation/DevOps",
-        "description": "Automation of the company's OS/Db Upgrading systems",
+        "description": "Automation of the company's Operating system/Database Upgrading systems",
         "technologies": "Python, Ansible",
 
     }
