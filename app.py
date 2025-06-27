@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request, jsonify
+from asgiref.wsgi import WsgiToAsgi
+
 app = Flask(__name__)
+asgi_app = WsgiToAsgi(app)
 
 # Homepage
 @app.route("/")
@@ -9,6 +12,14 @@ def index():
 
 
 healthcare_projects = [
+    {
+        "name": "Rust DICOM Toolkit",
+        "image": "images/rdicom.png",
+        "issue": "Existing DICOM tools are slow, large, or leak memory",
+        "tech": "Rust",
+        "resolution": "Build a fast, lightweight, and safe DICOM tool for tag reading, PNG export, and anonymization",
+        "github_url": "https://github.com/antoninchafiol/rdicom-lite"
+    },
     {
         "name": "AI-Powered No-Show Prediction",
         "image": "images/nsp.png",
@@ -20,7 +31,7 @@ healthcare_projects = [
     {
         "name": "Healthcare Virtual Library",
         "image": "images/vl.png",
-        "issue": "Too many papers scattered aruond the places without a quick way to access them.",
+        "issue": "Too many papers scattered around the places without a quick way to access them.",
         "tech": "Python, Rust, Postgres",
         "resolution": "Developing an optimized library that can be accessed from website or with phone using QR Codes or NFC tags",
         "github_url": ""

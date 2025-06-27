@@ -1,8 +1,13 @@
 runtime: python310
 entrypoint: gunicorn -b :$PORT main:app
 
+env_variables:
+  # Tells the buildpacks to skip pulling/pushing the cache image
+  X_GOOGLE_SKIP_RUNTIME_LAUNCH: "true"
+
 handlers:
   - url: /static
     static_dir: static
+
   - url: /.*
     script: auto
